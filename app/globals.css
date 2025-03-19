@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Main content colors - updated background to #d4f0f0 */
+    --background: 180 50% 88%; /* #d4f0f0 */
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 177 47% 48%; /* #43B3AE */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 177 47% 48%; /* #43B3AE */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 180 40% 94%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 177 47% 48%; /* #43B3AE */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 40% 83%;
+    --input: 180 40% 83%;
+    --ring: 177 47% 48%; /* #43B3AE */
+
+    --radius: 0.5rem;
+
+    /* Sidebar colors (unchanged) */
+    --sidebar-background: 33 89% 84%; /* #FBCEB1 */
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 6 83% 72%; /* #F88378 */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 6 83% 72%; /* #F88378 */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 33 50% 75%;
+    --sidebar-ring: 6 83% 72%; /* #F88378 */
+  }
+
+  .dark {
+    --background: 180 40% 30%;
+    --foreground: 210 40% 98%;
+
+    --card: 180 30% 35%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 180 30% 35%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 177 47% 48%; /* #43B3AE */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 177 30% 35%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 180 30% 25%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 177 47% 48%; /* #43B3AE */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 30% 40%;
+    --input: 180 30% 40%;
+    --ring: 177 47% 48%; /* #43B3AE */
+
+    /* Sidebar colors for dark mode (unchanged) */
+    --sidebar-background: 33 40% 25%;
+    --sidebar-foreground: 33 89% 84%; /* #FBCEB1 */
+    --sidebar-primary: 6 83% 72%; /* #F88378 */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 6 83% 72%; /* #F88378 */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 33 30% 35%;
+    --sidebar-ring: 6 83% 72%; /* #F88378 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+

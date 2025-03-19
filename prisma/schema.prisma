@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Chore {
+  id           Int       @id @default(autoincrement())
+  created_at   DateTime  @default(now())
+  assigned_to  Json?     @db.JsonB  // JSONB array of person IDs
+  chore_name   String    @db.VarChar
+  day          String    @db.VarChar
+  is_complete  Boolean   @default(false)
+}
+
+model PersonInfo {
+  id           Int       @id @default(autoincrement())
+  created_at   DateTime  @default(now())
+  name         String    @db.VarChar
+  profile_pic  Bytes?    // For bytea type
+  points       Int       @default(0) @db.SmallInt
+}
